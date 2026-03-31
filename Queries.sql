@@ -35,11 +35,3 @@ GROUP BY "Sub-Category"
 ORDER BY total_sales DESC
 LIMIT 5;
 
--- 5️⃣ Monthly Sales Trend
-SELECT 
-    substr("Order Date",1,7) AS month,  -- YYYY-MM format
-    SUM("Sales") AS total_sales,
-    SUM("Profit") AS total_profit
-FROM orders
-GROUP BY month
-ORDER BY month;
